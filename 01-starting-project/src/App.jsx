@@ -1,3 +1,6 @@
+import { CORE_CONCEPTS } from "./data";
+
+
 function Header(){
   return (
     <header>
@@ -11,8 +14,8 @@ function Header(){
   )
 }
 
-function SayHello(){
-  return <h1>Hello world from React JS</h1>
+function SayHello(props){
+  return <h1>Hello world from React JS {props.hello} <br /> <img src={CORE_CONCEPTS[0].image} alt="" /></h1>
 }
 
 function App() {
@@ -21,6 +24,9 @@ function App() {
      <Header></Header>
       <main>
         <h2>Time to get started!</h2>
+        <SayHello 
+        hello ="Hello from component"
+        />
       </main>
     </div>
   );
